@@ -5,6 +5,7 @@ public class Test {
         JSONObject o = new JSONObject();
         o.put("name", "jack");
         o.put("sex", null);
+        o.put("aa", null);
         System.out.println(JSONObject.toJSONString(o));
     }
 }
