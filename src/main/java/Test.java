@@ -7,5 +7,9 @@ public class Test {
         o.put("sex", null);
         o.put("aa", null);
         System.out.println(JSONObject.toJSONString(o));
+        if(o == null) System.out.println(123);
+        while(true) {
+
+        }
     }
 }

@@ -1,0 +1,6 @@
+projectKey=testproj
+serverUrl=http://localhost:9000
+serverVersion=9.7.1.62043
+dashboardUrl=http://localhost:9000/dashboard?id=testproj
+ceTaskId=AYRkZhcRlAz0mSoosQ2I
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYRkZhcRlAz0mSoosQ2I

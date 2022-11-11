@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.3" sequence="0" timestamp="1668131714321" analysisTimestamp="1668131721009" release="">
+  <Project>
+    <Jar>E:\product\MavenTest\target\classes\Test.class</Jar>
+    <AuxClasspathEntry>E:\product\MavenTest\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-11.0.6\lib\jrt-fs.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>E:\maven\repository\com\alibaba\fastjson\1.2.46\fastjson-1.2.46.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>E:\product\MavenTest\target\sonar\findbugs\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>E:\product\MavenTest\target\sonar\findbugs\jsr305.jar</AuxClasspathEntry>
+    <WrkDir>E:\product\MavenTest\target\sonar</WrkDir>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" instanceHash="1bce95ccf1a62332b40d004f88ce640d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of o, which is known to be non-null in Test.main(String[])</LongMessage>
+    <Class classname="Test" primary="true">
+      <SourceLine classname="Test" start="3" end="11" sourcefile="Test.java" sourcepath="Test.java">
+        <Message>At Test.java:[lines 3-11]</Message>
+      </SourceLine>
+      <Message>In class Test</Message>
+    </Class>
+    <Method classname="Test" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="Test" start="5" end="11" startBytecode="0" endBytecode="147" sourcefile="Test.java" sourcepath="Test.java"/>
+      <Message>In method Test.main(String[])</Message>
+    </Method>
+    <LocalVariable name="o" register="1" pc="43" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from o</Message>
+    </LocalVariable>
+    <Method classname="com.alibaba.fastjson.JSONObject" name="&lt;init&gt;" signature="()V" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.alibaba.fastjson.JSONObject" start="60" end="61" startBytecode="0" endBytecode="53" sourcefile="JSONObject.java" sourcepath="com/alibaba/fastjson/JSONObject.java"/>
+      <Message>Return value of new com.alibaba.fastjson.JSONObject() of type void</Message>
+    </Method>
+    <SourceLine classname="Test" primary="true" start="10" end="10" startBytecode="44" endBytecode="44" sourcefile="Test.java" sourcepath="Test.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at Test.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 11 Nov 2022 09:55:14 +0800" total_classes="1" referenced_classes="15" total_bugs="1" total_size="11" num_packages="1" java_version="11.0.6" vm_version="11.0.6+8-LTS" cpu_seconds="5.45" clock_seconds="1.23" peak_mbytes="432.80" alloc_mbytes="4074.00" gc_seconds="0.03" priority_2="1">
+    <FileStats path="Test.java" bugCount="1" size="11" bugHash="2ab006684ef404d8fb7d41af1ea208ce"/>
+    <PackageStats package="" total_bugs="1" total_types="1" total_size="11" priority_2="1">
+      <ClassStats class="Test" sourceFile="Test.java" interface="false" size="11" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="213" invocations="376" avgMicrosecondsPerInvocation="567" maxMicrosecondsPerInvocation="18294" standardDeviationMicrosecondsPerInvocation="1430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="36" invocations="15" avgMicrosecondsPerInvocation="2441" maxMicrosecondsPerInvocation="13064" standardDeviationMicrosecondsPerInvocation="3442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="33" invocations="378" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1661" standardDeviationMicrosecondsPerInvocation="98"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="42" avgMicrosecondsPerInvocation="650" maxMicrosecondsPerInvocation="16112" standardDeviationMicrosecondsPerInvocation="2477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="23" invocations="2" avgMicrosecondsPerInvocation="11701" maxMicrosecondsPerInvocation="22771" standardDeviationMicrosecondsPerInvocation="11070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="21" invocations="15" avgMicrosecondsPerInvocation="1442" maxMicrosecondsPerInvocation="6393" standardDeviationMicrosecondsPerInvocation="1802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="20" invocations="52" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="3258" standardDeviationMicrosecondsPerInvocation="509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="342" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="810" standardDeviationMicrosecondsPerInvocation="102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="15" avgMicrosecondsPerInvocation="967" maxMicrosecondsPerInvocation="10076" standardDeviationMicrosecondsPerInvocation="2460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="2" avgMicrosecondsPerInvocation="6755" maxMicrosecondsPerInvocation="12003" standardDeviationMicrosecondsPerInvocation="5248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="12" invocations="15" avgMicrosecondsPerInvocation="849" maxMicrosecondsPerInvocation="5427" standardDeviationMicrosecondsPerInvocation="1337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="11" invocations="15" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="3120" standardDeviationMicrosecondsPerInvocation="998"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
